@@ -13,6 +13,15 @@ const inputs = [
       author: 'John Doe',
     },
   },
+  // {
+  //   type: 'createPost',
+  //   post: {
+  //     id,
+  //     title: 'Another one',
+  //     content: 'This is my second post',
+  //     author: 'John Doe',
+  //   },
+  // },
 ];
 
 const data = await exmInstance.functions.write(functionId, inputs);

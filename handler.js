@@ -1,5 +1,9 @@
 export async function handle(state, action) {
   const { input } = action;
+  if (input.type === 'readPost') {
+    return { result: state.posts[input.postId] };
+  }
+
   if (input.type === 'createPost' || input.type === 'updatePost') {
     state.posts[input.post.id] = input.post;
   } else if (input.type === 'deletePost') {
